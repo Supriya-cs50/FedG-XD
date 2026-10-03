@@ -10,21 +10,41 @@ The dataset is stored separately from this repository because of its large size.
 
 ## Project Pipeline
 
-ISOT Drone Dataset
-        ↓
-Data Preprocessing
-        ↓
-Feature Alignment
-        ↓
-Graph Construction
-        ↓
-GraphSAGE
-        ↓
-Federated Learning
-        ↓
-Cross-Domain Evaluation
-        ↓
-Attack Detection
+                 ISOT Drone
+                     │
+                     ▼
+              Dataset Inspection
+                     │
+                     ▼
+              Feature Analysis
+                     │
+                     │
+                     ├───────────────┐
+                     │               │
+                     ▼               ▼
+                ISOT features    UAV-NIDD features
+                     │               │
+                     └───────┬───────┘
+                             ▼
+                    Common Feature Space
+                             │
+                             ▼
+                       Preprocessing
+                             │
+                             ▼
+                     Graph Construction
+                             │
+                             ▼
+                         GraphSAGE
+                             │
+                             ▼
+                    Federated Learning
+                             │
+                             ▼
+                  Cross-Domain Evaluation
+                             │
+                             ▼
+                       UAV-NIDD Test
 
 ## Current Work
 
